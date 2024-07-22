@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+// import styles from "./page.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* loot layout 에 container가 필요하다면 나중에 추가할 것. */}
       <body className={inter.className}>{children}</body>
     </html>
   );
