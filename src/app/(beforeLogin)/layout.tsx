@@ -1,4 +1,4 @@
-import styles from "@/app/(beforeLogin)/page.module.css";
+import styles from "@/styles/beforeLogin/home.module.css";
 type Props = {
   children: React.ReactNode;
   modal: React.ReactNode;

@@ -8,7 +8,7 @@ interface Props {}
 
 const Page: NextPage<Props> = ({}) => {
   const router = useRouter();
-  router.replace("/i/flow/login");
+  router.replace("/i/flow/signup");
   return <Home />;
 };
 
