@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import zLogo from "/public/zlogo.png";
-import styles from "@/styles/beforeLogin/home.module.css";
+import styles from "@/styles/beforeLogin/page.home.module.css";
 
 const { left, right, signup, login } = styles;
 
