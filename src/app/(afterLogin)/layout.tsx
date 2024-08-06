@@ -4,6 +4,7 @@ import Link from "next/link";
 import ZLogo from "../../../public/yRsRRjGO.jpg";
 import Icon from "@/components/icon";
 import NavMenu from "./_feature/nav.navmenu";
+import LogoutButton from "./_feature/nav.logoutbutton";
 
 type Props = {
   children: React.ReactNode;
@@ -22,9 +23,13 @@ export default function AfterLoginLayout({ children }: Props) {
             </Link>
             <nav>
               <ul>
-                <NavMenu/>
+                <NavMenu />
               </ul>
+              <Link href="/compose/tweet" className={styles.postButton}>
+                게시하기
+              </Link>
             </nav>
+            <LogoutButton />
           </div>
         </section>
       </header>
