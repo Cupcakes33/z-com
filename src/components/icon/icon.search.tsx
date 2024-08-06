@@ -1,6 +1,6 @@
-export default function SearchIcon({
-  ...props
-}: React.SVGProps<SVGSVGElement>) {
+import { IconProps } from "./namespace.icon";
+
+export default function SearchIcon({ ...props }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <g>

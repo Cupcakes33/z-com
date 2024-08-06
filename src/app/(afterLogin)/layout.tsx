@@ -3,22 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ZLogo from "../../../public/yRsRRjGO.jpg";
 import Icon from "@/components/icon";
-
-const {
-  container,
-  leftSectionWrapper,
-  leftSection,
-  leftSectionFixed,
-  logo,
-  logoPill,
-  postButton,
-  rightSectionWrapper,
-  rightSectionInner,
-  main,
-  rightSection,
-  search,
-  followRecommend,
-} = styles;
+import NavMenu from "./_feature/nav.navmenu";
 
 type Props = {
   children: React.ReactNode;
@@ -26,23 +11,28 @@ type Props = {
 
 export default function AfterLoginLayout({ children }: Props) {
   return (
-    <div className={container}>
-      <header className={leftSectionWrapper}>
-        <section className={leftSection}>
-          <div className={leftSectionFixed}>
-            <Link className={logo} href="/home">
-              <div className={logoPill}>
+    <div className={styles.container}>
+      <header className={styles.leftSectionWrapper}>
+        <section className={styles.leftSection}>
+          <div className={styles.leftSectionFixed}>
+            <Link className={styles.logo} href="/home">
+              <div className={styles.logoPill}>
                 <Image src={ZLogo} alt="logo" width={40} height={40} />
               </div>
             </Link>
+            <nav>
+              <ul>
+                <NavMenu/>
+              </ul>
+            </nav>
           </div>
         </section>
       </header>
-      <div className={rightSectionWrapper}>
-        <div className={rightSectionInner}>
-          <main className={main}>{children}</main>
-          <section className={rightSection}>
-            <form className={search}>
+      <div className={styles.rightSectionWrapper}>
+        <div className={styles.rightSectionInner}>
+          <main className={styles.main}>{children}</main>
+          <section className={styles.rightSection}>
+            <form className={styles.search}>
               <Icon name="search" width={20} />
               <input type="search"></input>
             </form>

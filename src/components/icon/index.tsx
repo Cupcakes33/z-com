@@ -1,6 +1,9 @@
 import { IconProps, ICON_NAMESPACE } from "./namespace.icon";
 
-const Icon: React.FC<IconProps> = ({ name, ...props }) => {
+type IconComponentProps = IconProps & {
+  name: keyof typeof ICON_NAMESPACE;
+};
+const Icon: React.FC<IconComponentProps> = ({ name, isActive, ...props }) => {
   const IconComponent = ICON_NAMESPACE[name];
   return <IconComponent {...props} />;
 };
