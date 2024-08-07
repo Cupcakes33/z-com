@@ -97,6 +97,11 @@
   height: 100%;
 }
 
+.rightSection > div {
+  margin-bottom: 60px;
+  width: inherit;
+}
+
 .search {
   position: fixed;
   height: 42px;

@@ -3,8 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import ZLogo from "../../../public/yRsRRjGO.jpg";
 import Icon from "@/components/icon";
-import NavMenu from "./_feature/nav.navmenu";
+import NavMenu from "./_components/nav.navmenu";
 import LogoutButton from "./_feature/nav.logoutbutton";
+import TrandsSection from "./_components/trands.section";
+import FollowSection from "./_components/follow.section";
 
 type Props = {
   children: React.ReactNode;
@@ -37,10 +39,14 @@ export default function AfterLoginLayout({ children }: Props) {
         <div className={styles.rightSectionInner}>
           <main className={styles.main}>{children}</main>
           <section className={styles.rightSection}>
-            <form className={styles.search}>
-              <Icon name="search" width={20} />
-              <input type="search"></input>
-            </form>
+            <div>
+              <form className={styles.search}>
+                <Icon name="search" width={20} />
+                <input type="search"></input>
+              </form>
+            </div>
+            <TrandsSection />
+            <FollowSection />
           </section>
         </div>
       </div>
