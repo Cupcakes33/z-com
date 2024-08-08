@@ -1,22 +1,8 @@
 "use client";
 
-import styles from "@/styles/beforeLogin/modal.login.module.css";
+import styles from '../../_styles/loginModal.module.css'
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-
-const {
-  modalBackground,
-  modal,
-  modalHeader,
-  closeButton,
-  modalBody,
-  inputDiv,
-  inputLabel,
-  input,
-  message,
-  modalFooter,
-  actionButton,
-} = styles;
 
 export default function LoginModal() {
   const [id, setId] = useState();
@@ -26,7 +12,6 @@ export default function LoginModal() {
   const router = useRouter();
   const onClickClose = () => {
     router.back();
-    // TODO: 뒤로가기가 /home이 아니면 /home으로 보내기
   };
 
   const onChangeId = () => {};
@@ -34,10 +19,10 @@ export default function LoginModal() {
   const onChangePassword = () => {};
 
   return (
-    <div className={modalBackground}>
-      <div className={modal}>
-        <div className={modalHeader}>
-          <button className={closeButton} onClick={onClickClose}>
+    <div className={styles.modalBackground}>
+      <div className={styles.modal}>
+        <div className={styles.modalHeader}>
+          <button className={styles.closeButton} onClick={onClickClose}>
             <svg
               width={24}
               viewBox="0 0 24 24"
@@ -52,27 +37,27 @@ export default function LoginModal() {
           <div>로그인하세요.</div>
         </div>
         <form onSubmit={onSubmit}>
-          <div className={modalBody}>
-            <div className={inputDiv}>
-              <label className={inputLabel} htmlFor="id">
+          <div className={styles.modalBody}>
+            <div className={styles.inputDiv}>
+              <label className={styles.inputLabel} htmlFor="id">
                 아이디
               </label>
               <input
                 id="id"
-                className={input}
+                className={styles.input}
                 value={id}
                 onChange={onChangeId}
                 type="text"
                 placeholder=""
               />
             </div>
-            <div className={inputDiv}>
-              <label className={inputLabel} htmlFor="password">
+            <div className={styles.inputDiv}>
+              <label className={styles.inputLabel} htmlFor="password">
                 비밀번호
               </label>
               <input
                 id="password"
-                className={input}
+                className={styles.input}
                 value={password}
                 onChange={onChangePassword}
                 type="password"
@@ -81,8 +66,8 @@ export default function LoginModal() {
             </div>
           </div>
           <div className={message}>{message}</div>
-          <div className={modalFooter}>
-            <button className={actionButton} disabled={!id && !password}>
+          <div className={styles.modalFooter}>
+            <button className={styles.actionButton} disabled={!id && !password}>
               로그인하기
             </button>
           </div>

@@ -1,10 +1,11 @@
 import { NextPage } from "next";
-import styles from "@/styles/afterLogin/components.trands.item.module.css";
 import Link from "next/link";
+
+import styles from "../_styles/trendsItem.module.css";
 
 interface Props {}
 
-const TrandsItem: NextPage<Props> = ({}) => {
+const TrendsItem: NextPage<Props> = ({}) => {
   return (
     <Link href={`/search?q=트렌드`} className={styles.container}>
       <div className={styles.count}>실시간트렌드</div>
@@ -14,4 +15,4 @@ const TrandsItem: NextPage<Props> = ({}) => {
   );
 };
 
-export default TrandsItem;
+export default TrendsItem;

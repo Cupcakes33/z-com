@@ -1,8 +1,9 @@
 "use client";
 
-import style from "@/styles/afterLogin/feature.navmenu.module.css";
 import { useSelectedLayoutSegment } from "next/navigation";
 import Link from "next/link";
+
+import styles from "../_styles/navMenu.module.css";
 
 export default function NavMenu() {
   const segment = useSelectedLayoutSegment();
@@ -14,7 +15,7 @@ export default function NavMenu() {
     <>
       <li>
         <Link href="/home">
-          <div className={style.navPill}>
+          <div className={styles.navPill}>
             {segment === "home" ? (
               <>
                 <svg
@@ -49,7 +50,7 @@ export default function NavMenu() {
       </li>
       <li>
         <Link href="/explore">
-          <div className={style.navPill}>
+          <div className={styles.navPill}>
             {segment && ["search", "explore"].includes(segment) ? (
               <>
                 <svg
@@ -84,7 +85,7 @@ export default function NavMenu() {
       </li>
       <li>
         <Link href="/messages">
-          <div className={style.navPill}>
+          <div className={styles.navPill}>
             {segment === "messages" ? (
               <>
                 <svg
@@ -120,7 +121,7 @@ export default function NavMenu() {
       {me?.id && (
         <li>
           <Link href={`/${me?.id}`}>
-            <div className={style.navPill}>
+            <div className={styles.navPill}>
               {segment === me.id ? (
                 <>
                   <svg

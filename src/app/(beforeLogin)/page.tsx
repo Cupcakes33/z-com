@@ -1,10 +1,10 @@
 import { NextPage } from "next";
-import Home from "./_feature/page.home";
+import Main from "./_feature/Main";
 
 interface Props {}
 
 const Page: NextPage<Props> = ({}) => {
-  return <Home />;
+  return <Main />;
 };
 
 export default Page;

@@ -2,7 +2,7 @@
 
 import { NextPage } from "next";
 import { useRouter } from "next/navigation";
-import Home from "../_feature/page.home";
+import Home from "../_feature/Main";
 
 interface Props {}
 

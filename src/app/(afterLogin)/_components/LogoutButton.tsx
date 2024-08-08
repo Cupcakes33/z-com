@@ -1,6 +1,6 @@
 "use client";
 
-import style from "@/styles/afterLogin/feature.logoutbutton.module.css";
+import styles from "../_styles/logoutButton.module.css";
 
 export default function LogoutButton() {
   const me = {
@@ -12,11 +12,11 @@ export default function LogoutButton() {
   const onLogout = () => {};
 
   return (
-    <button className={style.logOutButton} onClick={onLogout}>
-      <div className={style.logOutUserImage}>
+    <button className={styles.logOutButton} onClick={onLogout}>
+      <div className={styles.logOutUserImage}>
         <img src={me.image} alt={me.id} />
       </div>
-      <div className={style.logOutUserName}>
+      <div className={styles.logOutUserName}>
         <div>{me.nickname}</div>
         <div>@{me.id}</div>
       </div>

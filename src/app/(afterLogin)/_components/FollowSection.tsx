@@ -1,6 +1,7 @@
 import { NextPage } from "next";
-import styles from "@/styles/afterLogin/components.follow.section.module.css";
-import FollowItem from "./follow.item";
+import FollowItem from "./FollowItem";
+
+import styles from "../_styles/followSection.module.css";
 
 interface Props {}
 

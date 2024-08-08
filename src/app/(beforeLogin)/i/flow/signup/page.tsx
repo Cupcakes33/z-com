@@ -1,4 +1,4 @@
-import SignupModal from "@/app/(beforeLogin)/_feature/modal.signup";
+import SignupModal from "@/app/(beforeLogin)/@modal/_features/SignupModal";
 import { NextPage } from "next";
 
 interface Props {}

@@ -1,15 +1,10 @@
 import { NextPage } from "next";
-import LoginModal from "@/app/(beforeLogin)/_feature/modal.login";
+import LoginModal from "../../../_features/LoginModal";
 
 interface Props {}
 
 const Page: NextPage<Props> = ({}) => {
-  return (
-    <>
-    인터셉트 라우트
-      <LoginModal />
-    </>
-  );
+  return <LoginModal />;
 };
 
 export default Page;

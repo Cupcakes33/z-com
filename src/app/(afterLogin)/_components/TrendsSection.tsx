@@ -1,10 +1,12 @@
 import { NextPage } from "next";
-import styles from "@/styles/afterLogin/components.trands.item.module.css";
-import TrandsItem from "./trands.item";
+
+import TrandsItem from "./TrendsItem";
+
+import styles from "../_styles/trendsSection.module.css";
 
 interface Props {}
 
-const TrandsSection: NextPage<Props> = ({}) => {
+const TrendsSection: NextPage<Props> = ({}) => {
   return (
     <div className={styles.trendBg}>
       <div className={styles.trend}>
@@ -17,4 +19,4 @@ const TrandsSection: NextPage<Props> = ({}) => {
   );
 };
 
-export default TrandsSection;
+export default TrendsSection;

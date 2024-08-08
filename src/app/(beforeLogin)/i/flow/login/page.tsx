@@ -1,4 +1,4 @@
-import LoginModal from "@/app/(beforeLogin)/_feature/modal.login";
+import LoginModal from "@/app/(beforeLogin)/@modal/_features/LoginModal";
 import { NextPage } from "next";
 
 interface Props {}

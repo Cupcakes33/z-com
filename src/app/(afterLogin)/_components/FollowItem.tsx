@@ -1,8 +1,7 @@
-'use client'
+"use client";
 
 import { NextPage } from "next";
-import styles from '@/styles/afterLogin/components.follow.item.module.css'
-
+import styles from "../_styles/followItem.module.css";
 interface Props {}
 
 const FollowItem: NextPage<Props> = ({}) => {
